@@ -1,0 +1,46 @@
+# Enuygun Automation Configuration
+
+site:
+  url: "https://www.enuygun.com"
+
+browser:
+  name: "chrome"
+  headless: false             # Headless mode kapatıldı - Browser görünür
+  window_size:
+    width: 1366
+    height: 768
+  implicit_wait: 3            # Çok düşük wait time
+  page_load_timeout: 10       # Çok düşük timeout
+
+defaults:
+  departure_city: "İstanbul"
+  destination_city: "Ankara"
+  airport_codes:
+    departure: "IST"
+    destination: "ESB"
+
+dates:
+  days_ahead_departure: 15    # Daha yakın tarih
+  days_ahead_return: 3        # Daha kısa süre
+  format: "%d.%m.%Y"
+
+test_data:
+  valid_cities:
+    - "İstanbul"
+    - "Ankara"
+    - "İzmir"
+
+screenshot:
+  enabled: false              # Screenshot'ları devre dışı bırak
+  path: "screenshots/"
+
+reports:
+  enabled: false              # Raporları devre dışı bırak
+  path: "reports/"
+  format: "html"
+
+logging:
+  enabled: false              # Loglama devre dışı
+  level: "ERROR"
+  format: "%(levelname)s - %(message)s"
+  file: "logs/test_execution.log"

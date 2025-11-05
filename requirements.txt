@@ -1,0 +1,9 @@
+pytest
+selenium
+webdriver-manager
+pyyaml
+pytest-html
+pandas
+matplotlib
+seaborn
+numpy
